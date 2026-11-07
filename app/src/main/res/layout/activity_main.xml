@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/luggage_bg">
+
+    <!-- Toolbar Header & Title -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#212121"
+        app:titleTextColor="#FFFFFF"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Excess Baggage Fee Calculator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/ToolbarTitleStyle"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Ticket Class Selection -->
+    <RadioGroup
+        android:id="@+id/rgTicketClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <RadioButton
+            android:id="@+id/rbEconomy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Economy\n(20kg MAX)"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#FFFFFF"
+            android:checked="true"
+            android:gravity="center"
+            android:layout_marginRight="16dp"/>
+
+        <RadioButton
+            android:id="@+id/rbBusiness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business\n(40kg MAX)"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#FFFFFF"
+            android:gravity="center"/>
+    </RadioGroup>
+
+    <!-- Baggage Weight Input -->
+    <EditText
+        android:id="@+id/edtWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Total Baggage Weight (kg)"
+        android:textColorHint="#E0E0E0"
+        android:textColor="#FFFFFF"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Rate Per kg Input -->
+    <EditText
+        android:id="@+id/edtRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Rate Per Excess kg (RM)"
+        android:textColorHint="#E0E0E0"
+        android:textColor="#FFFFFF"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Output Results -->
+    <TextView
+        android:id="@+id/txtOutputWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Excess Baggage Weight: 0.00 kg"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:layout_marginBottom="6dp"/>
+
+    <TextView
+        android:id="@+id/txtOutputCharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Excess Baggage Charge: RM 0.00"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:layout_marginBottom="6dp"/>
+
+    <TextView
+        android:id="@+id/txtOutputTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Amount Payable: RM 0.00"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFF00"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Expanding Spacer pushes buttons down to the bottom -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- About Button -->
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Developer"
+        android:backgroundTint="#757575"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>
