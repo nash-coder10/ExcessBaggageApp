@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         edtWeight = findViewById(R.id.edtWeight);
         edtRate = findViewById(R.id.edtRate);
         rgTicketClass = findViewById(R.id.rgTicketClass);
-        rbEconomy = findViewById(R.id.rbEconomy); // <--- INI YANG TERTINGGAL TADI
+        rbEconomy = findViewById(R.id.rbEconomy); 
         btnCalculate = findViewById(R.id.btnCalculate);
         btnAbout = findViewById(R.id.btnAbout);
 
